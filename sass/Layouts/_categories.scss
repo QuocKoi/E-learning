@@ -1,0 +1,25 @@
+.categories{
+    margin-top: $mg-3;
+    .categories__content{
+        padding: 0;
+        h2{
+            font-size: $fs-4;
+        }
+        .categories__item{
+            font-size: $fs-3;
+            padding: $pd-1;
+            border: 1px solid $color-black-1;
+            margin: $mg-2 - 5 0;
+            cursor: pointer;
+            &:hover{
+                box-shadow: 0 0 1px 1px $color-black-1,0 3px 1px 0 $color-black-1;;
+            }
+        }
+        
+    }
+    @include responsive("small"){
+        .categories__content{
+            padding: 0 $pd-1;
+        }
+    }
+}

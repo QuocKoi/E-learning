@@ -1,0 +1,86 @@
+
+//Có tham số
+@mixin styletext($color,$fs,$fw) {
+    color:$color ;
+    font-size: $fs;
+    font-weight:$fw ;
+}
+@mixin styleButton($color,$bg-color,$border-color,$fs,$fw,$pd-y,$pd-x) {
+    color: $color;
+    background: $bg-color;
+    border: 1px solid $border-color;
+    font-size: $fs;
+    font-weight: $fw;
+    padding:$pd-y $pd-x;
+    cursor: pointer;
+}
+@mixin hoverButton($color-hover,$bg-hover,$border-hover) {
+    color: $color-hover;
+    background: $bg-hover;
+    border: 1px solid $border-hover;
+}
+@mixin  styleFormSearch($bg-color,$bg-color-focus,$border-color,$color-text) {
+    .input-group{
+        background-color: $bg-color;
+        .form-control{
+            background: transparent;
+            border-color:transparent ;
+            box-shadow: none;
+            transition: none;
+            color: $color-text;
+            &::placeholder{
+                color: $color-text;
+            }
+            &:focus{
+                background-color: $bg-color-focus;
+                border-color:$border-color;
+                border-right-color:transparent ;
+            }
+            &:focus + .input-group-append{
+                .input-group-text{
+                    background-color: $bg-color-focus;
+                    border-color:$border-color;
+                    border-left-color:transparent ;
+                    i{
+                        color: $color-red-0;
+                    }
+                    &:hover{
+                        i{
+                            color: $color-white-0;
+                        }
+                        background-color: $color-red-0;
+                    }
+                }
+            }
+        }
+        .input-group-append{
+            .input-group-text{
+                background-color: transparent;
+                border-color: transparent;
+                cursor: pointer;
+                border-radius: 0;
+                i{
+                    color: $color-red-0;
+                }
+                &:hover{
+                    i{
+                        color: $color-white-0;
+                    }
+                    background-color: $color-red-0;
+                }
+            }
+            
+        }
+
+    }
+}
+@mixin responsive($screen) {
+    @if map-has-key($map: $breakpoints, $key:$screen ) {
+        $value:map-get($map: $breakpoints, $key:$screen );
+        @media screen and (max-width:$value){
+        @content;
+        }
+    }@else{
+        @warn "`{$screen}` isn't exist in breakpoints";
+    }
+}

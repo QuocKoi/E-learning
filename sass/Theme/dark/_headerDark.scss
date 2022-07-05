@@ -1,0 +1,58 @@
+.darkMode{
+.myNavbar{
+    background-color: $color-dark-2;
+    .myNavbar__left{
+       
+        .navbar-brand{
+            .logo-white{
+                display: inline-block;
+                
+            }
+            .logo-black{
+                display: none;
+            }
+        }
+        span{
+            @include styletext($color-gray-8,$fs-1,$fw-0);
+            i{
+                color: $color-gray-9;
+            }
+        }
+        .myNavbar__form-search{
+            @include styleFormSearch($color-dark-0,$color-dark-3,$color-gray-7,$color-gray-8);
+        }
+    }
+    .myNavbar__right{
+        .navbar-nav{
+        .nav-item{
+            &:hover{
+                background-color: $color-dark-0;
+                border-color:$color-gray-7;
+            }
+            .nav-link{
+                color: $color-gray-8;
+            }
+            .myNavbar__overlay{
+               background-color: $color-dark-2;
+               border-color:$color-gray-7;
+               &::before{
+                   background-color: $color-dark-2;
+                   border-color:$color-gray-7;
+               }
+            }
+      
+        }
+        .myNavbar__button{
+            &:hover{
+                background-color: transparent;
+                border-color:transparent;
+            }
+        }
+     
+    }
+    }
+    .navbar-toggler{
+        background-color: $color-gray-8;
+    }
+}
+}

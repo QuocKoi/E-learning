@@ -1,0 +1,84 @@
+.card{
+    height: 275px;
+    .card-body{
+        padding: 1rem;
+        .card-title{
+            margin: $mg-0 0;
+            @include styletext($color-black-0,$fs-0,$fw-1);
+        }
+        .card-text{
+            @include styletext($color-gray-0,$fs-1 - 1,$fw-0);
+            margin: $mg-0 0;
+        }
+        .card__rating{
+            i{
+                @include styletext($color-yellow-0,$fs-1 - 1,$fw-3);
+            }
+            span:nth-of-type(2){
+                @include styletext($color-gray-0,$fs-1 - 1,$fw-1);
+            }
+            span:nth-of-type(3){
+                @include styletext($color-gray-0,$fs-1 - 1,$fw-0);
+            }
+        }
+        .card__price{
+            text-align: right;
+            span:first-child{
+                @include styletext($color-gray-0,$fs-1,$fw-0);
+                text-decoration: line-through;
+            }
+            span:last-child{
+                @include styletext($color-black-0,$fs-0,$fw-1);
+            }
+        }
+    }
+    @include responsive("extra-large"){
+        .card-body{
+            padding: 0.8rem;
+            .card-text{
+                @include styletext($color-gray-0,$fs-1 - 2,$fw-0);
+            }
+    }
+    }
+}
+.card--feddback{
+    height: 280px;
+    .card-body{
+        padding: 2rem;
+        .card__top{
+            display: flex;
+            align-items: center;
+            .card__avatar{
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 1rem;
+            }
+            .card__name{
+                p{
+                    margin: 0;
+                }
+            }
+        }
+        .card-text{
+            @include styletext($color-black-0,$fs-0,$fw-0);
+        }
+    }
+    @include responsive("extra-large"){
+        .card-body{
+            padding: 1.5rem;
+            .card-text{
+                @include styletext($color-black-0,$fs-0 - 1,$fw-0);
+            }
+        }
+    }
+    @include responsive("less-than-small"){
+        .card-body{
+            padding: 1.5rem;
+            .card-text{
+                @include styletext($color-black-0,$fs-0 - 2,$fw-0);
+            }
+        }
+    }
+}

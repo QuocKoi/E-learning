@@ -1,0 +1,21 @@
+.banner{
+    //bacground: color url() position/bg-size bg-repeat ,linear-gradient();
+    background: url("../img/pngkit_udemy-logo-png_2223616.png") 0/70% no-repeat,linear-gradient(61deg,$color-purple-0,$color-blue-1 41%);
+    background-blend-mode: overlay;
+    height: 325px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    h2{
+        @include styletext($color-white-0,$fs-4,$fw-0)
+    }
+    p{
+        color: $color-white-0;
+        margin: 0;
+    }
+    .button--red{
+        margin: $mg-0 + 5 0;
+    }
+ 
+}

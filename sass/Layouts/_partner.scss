@@ -1,0 +1,13 @@
+.partner{
+    background-color: $color-gray-5;
+    padding: $pd-3 - 2 0 1rem;
+    .partner__content{
+        padding: 0;
+        text-align: center;
+    }
+    @include responsive("small"){
+        .partner__content{
+            padding: 0 $pd-1;
+        }
+    }
+}

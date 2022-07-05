@@ -1,0 +1,19 @@
+.darkMode{
+    .button--white{
+        &:hover{
+            @include hoverButton($color-gray-8,$color-dark-0,$color-dark-2);
+        }
+        }
+    .button--language{
+    @include styleButton($color-gray-9,$color-dark-0,$color-dark-2,$fs-1,$fw-1,$pd-2 + 1,$pd-0);
+    &:hover{
+        @include hoverButton($color-gray-9,t$color-dark-0,$color-dark-2);
+    }
+    }
+    .button--red{
+        &:hover{
+            background-color: $color-pink-0;
+            border-color: $color-pink-0;
+        }
+    }
+}

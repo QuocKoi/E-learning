@@ -1,0 +1,44 @@
+.darkMode{
+    .card{
+        border-color: $color-gray-7;
+        background-color: $color-dark-0;
+        .card-body{
+            .card-title{
+                @include styletext($color-gray-9,$fs-0,$fw-1);
+            }
+            .card-text{
+                color:$color-gray-8;
+            }
+            .card__rating{
+                span:nth-of-type(2){
+                    @include styletext($color-gray-9,$fs-1 - 1,$fw-1);
+                }
+                span:nth-of-type(3){
+                    @include styletext($color-gray-8,$fs-1 - 1,$fw-0);
+                }
+            }
+            .card__price{
+                span:first-child{
+                    @include styletext($color-gray-8,$fs-1,$fw-0);
+                    text-decoration: line-through;
+                }
+                span:last-child{
+                    @include styletext($color-gray-9,$fs-0,$fw-1);
+                }
+            }
+        }
+    }
+    .card--feddback{
+        background: $color-dark-2;
+        .card-body{
+            .card__top{
+                .card__name{
+                    p{
+                        color: $color-gray-9;
+                    }
+                }
+            }
+        }
+   
+    }
+}

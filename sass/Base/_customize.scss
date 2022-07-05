@@ -1,0 +1,74 @@
+
+.owl-carousel{
+    .owl-nav{
+        button.owl-prev,button.owl-next{
+            font-size: $fs-4;
+            color: $color-blue-0;
+            background-color: $color-white-0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px 10px $color-black-1;
+            position: absolute;
+            top:30%;
+
+        }
+        button.owl-prev{
+            left: -4%;
+            line-height: 40px;
+            &:hover{
+                background: $color-white-0;
+                color: $color-blue-0;
+            }
+        }
+        button.owl-next{
+            right: -4%;
+            line-height: 40px;
+            &:hover{
+                background: $color-white-0;
+                color: $color-blue-0;
+            }
+        }
+        
+    }
+
+   
+    @include responsive("small"){
+        .owl-nav{
+            button.owl-prev,button.owl-next{
+                font-size: $fs-5 - 4;
+                width: 30px;
+                height: 30px;
+                top: 30%;
+            }
+            button.owl-prev{
+                line-height: 30px;
+                left: -5%;
+            }
+            button.owl-next{
+                right: -5%;
+                line-height: 30px;
+            }
+            
+        }
+    }
+    @include responsive("less-than-small"){
+        .owl-nav{
+            button.owl-prev,button.owl-next{
+                font-size: $fs-5 - 4;
+                width: 30px;
+                height: 30px;
+                top: 24%;
+            }
+            button.owl-prev{
+                line-height: 30px;
+                left: -5%;
+            }
+            button.owl-next{
+                right: -5%;
+                line-height: 30px;
+            }
+            
+        }
+    }
+}
